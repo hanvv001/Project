@@ -1,14 +1,22 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-	Hello world!  
-</h1>
+<%@include file="include/header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="include/sidebar.jsp" %>
+<!-- main -->
+<section id= "main-content">
+	<section class="wrapper">
+		<div class="row">
+			<div class="com-md-12">
+				<div class="box1">
+					<img src="/resources/assets/img/ride.gif"><%-- <c:url/> --%>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
 
-<P>  The time on the server is ${serverTime}. </P>
-</body>
-</html>
+<%-- <%@response.sendRedirect("/fbbs/list") %> --%>
+
+<%@include file="include/footer.jsp" %>
