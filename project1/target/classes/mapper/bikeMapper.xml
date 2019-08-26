@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.dao.BikeDAO">
+	<select id="list" resultType="BikeVO">
+	<![CDATA[
+		select * from office
+		
+	]]>
+	</select>
+
+	<update id="bikeRental">
+		update office
+		set count = (count - 1)
+		where address = #{addr}
+	</update>
+	
+	<update id="bikeReturn">
+		update office
+		set count = (count + 1)
+		where address = #{addr}
+	</update>
+
+</mapper>
